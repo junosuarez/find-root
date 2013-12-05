@@ -11,7 +11,8 @@ var findRoot = require('find-root')
 
 // from a starting directory, recursively search for the nearest
 // directory containing package.json
-var root = findRoot('/Users/jden/dev/find-root/tests/')
+var root = findRoot('/Users/jden/dev/find-root/tests')
+// => '/Users/jden/dev/find-root'
 
 var dirname = path.basename(root)
 console.log('is it the same?')
