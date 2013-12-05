@@ -4,6 +4,9 @@ var fs = require('fs')
 function findRoot(start) {
   start = start || module.parent.filename
   if (typeof start === 'string') {
+    if (start[start.length-1] !== path.sep) {
+      start+=path.sep
+    }
     start = start.split(path.sep)
   }
   if(!start.length) {

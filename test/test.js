@@ -20,7 +20,7 @@ describe('find-root', function () {
 
     var findRoot = moquire(MODULE, {fs: fs})
 
-    findRoot('/foo/bar/baz/')
+    findRoot('/foo/bar/baz')
       .should.equal('/foo')
 
     checked.should.deep.equal([
