@@ -14,9 +14,10 @@ function findRoot(start) {
   }
   start.pop()
   var dir = start.join(path.sep)
-  if (fs.existsSync(path.join(dir, 'package.json'))) {
-    return dir
-  }
+  try {
+    fs.statSync(path.join(dir, 'package.json'));
+    return dir;
+  } catch (e) {}
   return findRoot(start)
 }
 

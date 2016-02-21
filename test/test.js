@@ -12,9 +12,13 @@ describe('find-root', function () {
 
     var checked = []
     var fs = {
-      existsSync: function (path) {
+      statSync: function (path) {
         checked.push(path)
-        return path === '/foo/package.json'
+        if (path === '/foo/package.json') {
+          return {};
+        } else {
+          throw new Error();
+        }
       }
     }
 
@@ -34,8 +38,8 @@ describe('find-root', function () {
   it('throws if not found', function () {
 
     var fs = {
-      existsSync: function (path) {
-        return false
+      statSync: function (path) {
+        throw new Error();
       }
     }
 
