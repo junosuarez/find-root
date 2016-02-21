@@ -1,6 +1,8 @@
 # find-root
 recursively find the closest package.json
 
+[![Circle CI](https://circleci.com/gh/jden/find-root.svg?style=svg)](https://circleci.com/gh/jden/find-root)
+
 ## usage
 Say you want to check if the directory name of a project matches its
 module name in package.json:
