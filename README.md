@@ -24,13 +24,16 @@ console.log(dirname === require(path.join(root, 'package.json')).name)
 
 ## api
 
-### `findRoot: (startingPath : String) => String`
+### `findRoot: (startingPath : String, [packageName : String]) => String`
 
 Returns the path for the nearest directory to `startingPath` containing
 a `package.json` file, eg `/foo/module`.
 
 Throws an error if no `package.json` is found at any level in the
 `startingPath`.
+
+If `packageName` is passed, it will only return if the `name` property in
+the `package.json` file is matched. Otherwise it continues up the file tree.
 
 
 ## installation
