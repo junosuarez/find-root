@@ -15,15 +15,15 @@
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "repository": "git@github.com:agilemd/find-root.git",
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "chai": "~1.6.0",
-    "mocha": "~1.9.0",
-    "moquire": "~1.5.4",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "moquire": "^1.5.5",
     "standard": "^10.0.2"
   }
 }

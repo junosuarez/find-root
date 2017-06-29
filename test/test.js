@@ -10,13 +10,9 @@ describe('find-root', function () {
   it('recursively looks for package.json', function () {
     var checked = []
     var fs = {
-      statSync: function (path) {
+      existsSync: function (path) {
         checked.push(path)
-        if (path === '/foo/package.json') {
-          return {}
-        } else {
-          throw new Error()
-        }
+        return path === '/foo/package.json'
       }
     }
 
@@ -29,6 +25,23 @@ describe('find-root', function () {
       '/foo/bar/baz/package.json',
       '/foo/bar/package.json',
       '/foo/package.json'
+    ])
+  })
+
+  it('can take a custom check argument', function () {
+    var checked = []
+
+    var findRoot = require(MODULE)
+
+    findRoot('/foo/bar/baz', function (dir) {
+      checked.push(dir)
+      return dir === '/foo/bar'
+    })
+    .should.equal('/foo/bar')
+
+    checked.should.deep.equal([
+      '/foo/bar/baz',
+      '/foo/bar'
     ])
   })
 
