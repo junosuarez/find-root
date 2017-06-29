@@ -1,12 +1,13 @@
 {
   "name": "find-root",
-  "author": "AgileMD <hello@agilemd.com>",
-  "contributors": [
-    "jden <jason@denizac.org>"
-  ],
+  "author": "jsdnxx",
   "version": "1.0.0",
   "description": "find the closest package.json",
   "keywords": [
+    "fs",
+    "get",
+    "find",
+    "closest",
     "package",
     "module",
     "base",
@@ -17,7 +18,7 @@
     "pretest": "standard",
     "test": "mocha"
   },
-  "repository": "git@github.com:agilemd/find-root.git",
+  "repository": "git@github.com:js-n/find-root.git",
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
