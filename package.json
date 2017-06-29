@@ -14,6 +14,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "pretest": "standard",
     "test": "node node_modules/mocha/bin/mocha"
   },
   "repository": "git@github.com:agilemd/find-root.git",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "chai": "~1.6.0",
     "mocha": "~1.9.0",
-    "moquire": "~1.5.4"
+    "moquire": "~1.5.4",
+    "standard": "^10.0.2"
   }
 }
