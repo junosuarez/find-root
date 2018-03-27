@@ -1,7 +1,7 @@
 {
   "name": "find-root",
   "author": "jsdnxx",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "find the closest package.json",
   "keywords": [
     "fs",
@@ -13,6 +13,9 @@
     "base",
     "root"
   ],
+  "bin": {
+    "find-npm-root": "bin/find-npm-root.js"
+  },
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
