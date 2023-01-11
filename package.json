@@ -26,7 +26,7 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "chai": "^4.0.2",
-    "mocha": "^3.4.2",
+    "mocha": "^10.2.0",
     "moquire": "^1.5.5",
     "standard": "^10.0.2"
   }
